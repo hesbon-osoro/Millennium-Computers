@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      New Perspectives on HTML5 and CSS3, 7th Edition
+      Tutorial 7
+      Case Problem 4
+
+      Millennium Computers Order Form
+      Author: Hesbon Osoro
+      Date: 12/9/22   
+
+      Filename:   mc_pc.html
+
+   -->
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CGIP Registration Form</title>
+    <link href="mc_styles.css" rel="stylesheet" />
+    <link href="mc_forms.css" rel="stylesheet" />
+    <script src="mc_script.js"></script>
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <img src="mc_logo.png" alt="Millennium Computers" />
+        <!-- <h1>Millennium Computers</h1> -->
+      </header>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+      <main>
+        <form
+          action="http://www.mill_computers.com/orders/process.cgi"
+          method="post"
+        >
+          <table id="orderForm">
+            <tr>
+              <th colspan="2">Customer Contact</th>
+            </tr>
+            <tr>
+              <td>First Name</td>
+              <td>
+                <input
+                  type="text"
+                  name="fName"
+                  id="fName"
+                  required
+                  pattern="[A-Za-z]{1,20}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Last Name</td>
+              <td>
+                <input
+                  type="text"
+                  name="lName"
+                  id="lName"
+                  required
+                  pattern="[A-Za-z]{1,20}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Street Address</td>
+              <td>
+                <input
+                  type="text"
+                  name="street"
+                  id="street"
+                  required
+                  pattern="[A-Za-z0-9]{1,20}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>City</td>
+              <td>
+                <input
+                  type="text"
+                  name="city"
+                  id="city"
+                  required
+                  pattern="[A-Za-z]{1,20}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>State</td>
+              <td>
+                <input
+                  type="text"
+                  name="state"
+                  id="state"
+                  required
+                  pattern="[A-Za-z]{1,20}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Zip Code</td>
+              <td>
+                <input
+                  type="text"
+                  name="zip"
+                  id="zip"
+                  required
+                  pattern="[0-9]{5}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>Phone Number</td>
+              <td>
+                <input
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  required
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                />
+              </td>
+            </tr>
+            <tr>
+              <th colspan="2">Order Details</th>
+            </tr>
+            <tr>
+              <td>Processor Speed</td>
+              <td>
+                <select name="pSpeed" id="pSpeed">
+                  <option value="1.8">1.8 GHz</option>
+                  <option value="2.0">2.0 GHz</option>
+                  <option value="2.2">2.2 GHz</option>
+                  <option value="2.4">2.4 GHz</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Memory</td>
+              <td>
+                <select name="mem" id="mem">
+                  <option value="512">512 MB</option>
+                  <option value="1">1 GB</option>
+                  <option value="2">2 GB</option>
+                  <option value="4">4 GB</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Monitor Size</td>
+              <td>
+                <select name="monitor" id="monitor">
+                  <option value="15">15 in.</option>
+                  <option value="17">17 in.</option>
+                  <option value="19">19 in.</option>
+                  <option value="21">21 in.</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>Hard Drive Size</td>
+              <td>
+                <select name="hd" id="hd">
+                  <option value="40">40 GB</option>
+                  <option value="80">80 GB</option>
+                  <option value="120">120 GB</option>
+                  <option value="160">160 GB</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>DVD Burner</td>
+              <td>
+                <input type="radio" name="dvd" id="dvd" value="yes" />
+                <label for="dvd">Yes</label>
+                <input type="radio" name="dvd" id="dvdno" value="no" />
+                <label for="dvdno">No</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Tuner Card</td>
+              <td>
+                <input type="radio" name="tuner" id="tuner" value="yes" />
+                <label for="tuner">Yes</label>
+                <input type="radio" name="tuner" id="tunerno" value="no" />
+                <label for="tunerno">No</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Media Card Reader</td>
+              <td>
+                <input type="radio" name="mcard" id="mcard" value="yes" />
+                <label for="mcard">Yes</label>
+                <input type="radio" name="mcard" id="mcardno" value="no" />
+                <label for="mcardno">No</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Warranty</td>
+              <td>
+                <input
+                  type="checkbox"
+                  name="warranty"
+                  id="warranty"
+                  value="yes"
+                />
+
+                <label for="warranty"> 24-month extended warranty </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td>
+                <input type="radio" name="ship" id="ship5" value="5" />
+                <label for="ship5">5-day shipping</label>
+                <input type="radio" name="ship" id="ship3" value="3" />
+                <label for="ship3">3-day shipping</label>
+                <input type="radio" name="ship" id="ship2" value="2" />
+                <label for="ship2">2-day shipping</label>
+                <input type="radio" name="ship" id="ship1" value="1" />
+                <label for="ship1">1-day shipping</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Comments</td>
+              <td>
+                <textarea
+                  name="comments"
+                  id="comments"
+                  cols="30"
+                  rows="5"
+                ></textarea>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2" id="buttons">
+                <input type="submit" value="Send Order" />
+                <input type="reset" value="Cancel Order" />
+                <input type="button" value="Contact Me" />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </main>
+      <footer>
+        <p>&copy; 2022, All Rights Reserved</p>
+      </footer>
+    </div>
+  </body>
+</html>

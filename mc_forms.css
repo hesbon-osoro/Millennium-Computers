@@ -1,0 +1,111 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 7
+   Case Problem 4
+
+   Millennium Computers Style Sheet
+ 
+   Author: Hesbon Osoro
+   Date: 12/9/22 
+   
+   Filename:         mc_forms.css
+
+*/
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+}
+
+form table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+form th {
+  background-color: #000;
+  color: #fff;
+  padding: 0.5em;
+  text-align: left;
+}
+
+form td {
+  padding: 0.5em;
+}
+
+form input {
+  padding: 0.5em;
+  border: 1px solid #000;
+  border-radius: 0.5em;
+}
+
+form input[type="submit"],
+form input[type="reset"],
+form input[type="button"] {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover,
+form input[type="button"]:hover {
+  background-color: gray;
+}
+
+td#buttons {
+  text-align: center;
+}
+
+/* use mc_go.png and mc_stop.png to validate form fields */
+form input[type="text"]:valid {
+  background-image: url(mc_go.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+form input[type="text"]:invalid {
+  background-image: url(mc_stop.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+form input[type="email"]:valid {
+  background-image: url(mc_go.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+form input[type="email"]:invalid {
+  background-image: url(mc_stop.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+form input[type="tel"]:valid {
+  background-image: url(mc_go.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+form input[type="tel"]:invalid {
+  background-image: url(mc_stop.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* Mobile devices */
+
+@media screen and (max-width: 600px) {
+  form {
+    width: 100%;
+  }
+  form th {
+    display: none;
+  }
+}
